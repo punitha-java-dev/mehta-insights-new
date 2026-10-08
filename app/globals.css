@@ -5461,3 +5461,30 @@ body .hero-section {
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
+
+.thank-you-page {
+  display: grid;
+  min-height: calc(100svh - 72px);
+  align-items: center;
+}
+
+.thank-you-card {
+  width: min(100%, 720px);
+  margin-inline: auto;
+}
+
+.thank-you-page .form-success h1 {
+  margin: 0 0 12px;
+  color: #082b63;
+  font-size: clamp(32px, 4vw, 42px);
+  font-weight: 750;
+  line-height: 1.15;
+}
+
+.thank-you-page .thank-you-message {
+  max-width: 600px;
+  margin: 0 auto 24px;
+  color: #52667a;
+  font-size: 17px;
+  line-height: 1.65;
+}
