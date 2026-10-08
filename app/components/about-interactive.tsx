@@ -188,87 +188,98 @@ export function AboutInteractive() {
     >
       <div className="container">
         <div className="about-content">
-          <motion.div
-            aria-label="Ankit Mehta portrait; activate to apply for the program"
-            aria-pressed={imageActive}
-            className={`analyst-photo-card${imageActive ? " is-image-active" : ""}`}
-            onBlur={(event) => {
-              if (!event.currentTarget.contains(event.relatedTarget)) clearImageCue();
-            }}
-            onClick={() => {
-              const isTouch = touchStarted.current || window.matchMedia("(hover: none)").matches;
-              if (isTouch && !imageActive) {
-                activateImage();
-              } else {
-                scrollToApplication();
-              }
-              touchStarted.current = false;
-            }}
-            onFocus={() => {
-              if (!touchStarted.current) activateImage();
-            }}
-            onKeyDown={(event) => {
-              if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                scrollToApplication();
-              }
-            }}
-            onPointerDown={(event) => {
-              touchStarted.current = event.pointerType === "touch";
-            }}
-            onPointerEnter={(event) => {
-              if (event.pointerType === "mouse") activateImage();
-            }}
-            onPointerLeave={(event) => {
-              if (event.pointerType === "mouse") clearImageCue();
-            }}
-            role="button"
-            tabIndex={0}
-            variants={imageVariants}
-          >
-            <Image
-              alt="Ankit Mehta"
-              className="analyst-photo"
-              height={1303}
-              src="/images/hero-mehta-insights.png"
-              width={1303}
-              sizes="(max-width: 520px) 100vw, (max-width: 760px) 40vw, 32vw"
-            />
-            <AnimatePresence>
-              {imageActive && (
-                <motion.div
-                  animate={{ opacity: 1, y: 0 }}
-                  aria-hidden="true"
-                  className={`about-image-apply-cue${reduceMotion ? " is-reduced-motion" : ""}`}
-                  exit={{ opacity: 0, y: 4 }}
-                  initial={reduceMotion ? { opacity: 0 } : { opacity: 0, y: 5 }}
-                  transition={{ duration: reduceMotion ? 0 : 0.3 }}
-                >
-                  <span className="about-image-apply-message">
-                    <strong>Ready to start?</strong>
-                    <span>Apply for the 16-Week Program <ArrowRight size={12} /></span>
-                  </span>
-                  <motion.span
-                    animate={reduceMotion ? undefined : { x: [0, 5, 1, 5, 1, 0], y: [0, -2, 0, -2, 0, 0] }}
-                    className="about-image-pointer"
-                    transition={reduceMotion ? { duration: 0 } : { duration: 1.5, times: [0, 0.22, 0.4, 0.62, 0.8, 1], ease: "easeInOut" }}
+          <div className="about-visual">
+            <motion.div
+              aria-label="Ankit Mehta portrait; activate to apply for the program"
+              aria-pressed={imageActive}
+              className={`analyst-photo-card${imageActive ? " is-image-active" : ""}`}
+              onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget)) clearImageCue();
+              }}
+              onClick={() => {
+                const isTouch = touchStarted.current || window.matchMedia("(hover: none)").matches;
+                if (isTouch && !imageActive) {
+                  activateImage();
+                } else {
+                  scrollToApplication();
+                }
+                touchStarted.current = false;
+              }}
+              onFocus={() => {
+                if (!touchStarted.current) activateImage();
+              }}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  scrollToApplication();
+                }
+              }}
+              onPointerDown={(event) => {
+                touchStarted.current = event.pointerType === "touch";
+              }}
+              onPointerEnter={(event) => {
+                if (event.pointerType === "mouse") activateImage();
+              }}
+              onPointerLeave={(event) => {
+                if (event.pointerType === "mouse") clearImageCue();
+              }}
+              role="button"
+              tabIndex={0}
+              variants={imageVariants}
+            >
+              <Image
+                alt="Ankit Mehta"
+                className="analyst-photo"
+                height={1303}
+                src="/images/hero-mehta-insights.png"
+                width={1303}
+                sizes="(max-width: 520px) 100vw, (max-width: 760px) 40vw, 42vw"
+              />
+              <AnimatePresence>
+                {imageActive && (
+                  <motion.div
+                    animate={{ opacity: 1, y: 0 }}
+                    aria-hidden="true"
+                    className={`about-image-apply-cue${reduceMotion ? " is-reduced-motion" : ""}`}
+                    exit={{ opacity: 0, y: 4 }}
+                    initial={reduceMotion ? { opacity: 0 } : { opacity: 0, y: 5 }}
+                    transition={{ duration: reduceMotion ? 0 : 0.3 }}
                   >
-                    <Pointer aria-hidden="true" size={24} strokeWidth={1.8} />
-                  </motion.span>
-                  <motion.svg
-                    animate={reduceMotion ? undefined : { opacity: [0.35, 0.8, 0.35] }}
-                    className="about-image-apply-arrow"
-                    fill="none"
-                    transition={reduceMotion ? { duration: 0 } : { duration: 1.4, repeat: 2, ease: "easeInOut" }}
-                    viewBox="0 0 74 34"
-                  >
-                    <path d="M2 3C23 7 38 14 60 27" stroke="currentColor" strokeDasharray="3 4" strokeWidth="1.5" />
-                    <path d="m53 26 8 3-2-8" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-                  </motion.svg>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.div>
+                    <span className="about-image-apply-message">
+                      <strong>Ready to start?</strong>
+                      <span>Apply for the 16-Week Program <ArrowRight size={12} /></span>
+                    </span>
+                    <motion.span
+                      animate={reduceMotion ? undefined : { x: [0, 5, 1, 5, 1, 0], y: [0, -2, 0, -2, 0, 0] }}
+                      className="about-image-pointer"
+                      transition={reduceMotion ? { duration: 0 } : { duration: 1.5, times: [0, 0.22, 0.4, 0.62, 0.8, 1], ease: "easeInOut" }}
+                    >
+                      <Pointer aria-hidden="true" size={24} strokeWidth={1.8} />
+                    </motion.span>
+                    <motion.svg
+                      animate={reduceMotion ? undefined : { opacity: [0.35, 0.8, 0.35] }}
+                      className="about-image-apply-arrow"
+                      fill="none"
+                      transition={reduceMotion ? { duration: 0 } : { duration: 1.4, repeat: 2, ease: "easeInOut" }}
+                      viewBox="0 0 74 34"
+                    >
+                      <path d="M2 3C23 7 38 14 60 27" stroke="currentColor" strokeDasharray="3 4" strokeWidth="1.5" />
+                      <path d="m53 26 8 3-2-8" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                    </motion.svg>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+            <div className="about-credentials">
+              <span className="about-credentials-icon">
+                <ShieldCheck aria-hidden="true" size={19} strokeWidth={1.9} />
+              </span>
+              <span>
+                <strong>SEBI Registered Research Analyst</strong>
+                <span>INH000025577</span>
+              </span>
+            </div>
+          </div>
 
           <div className="about-copy">
             <motion.div variants={headingVariants}>

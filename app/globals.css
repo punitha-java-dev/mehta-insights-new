@@ -5488,3 +5488,537 @@ body .hero-section {
   font-size: 17px;
   line-height: 1.65;
 }
+
+/* Premium presentation for the Why Mehta Insights section only */
+.section-about {
+  padding-block: clamp(68px, 7vw, 96px);
+  background: #f4f8fc;
+}
+
+.section-about > .container {
+  width: min(100% - 48px, 1240px);
+}
+
+.section-about .about-content {
+  display: grid;
+  margin-top: 0;
+  align-items: center;
+  grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
+  gap: clamp(32px, 5vw, 64px);
+}
+
+.section-about .about-visual {
+  min-width: 0;
+}
+
+.section-about .analyst-photo-card {
+  min-height: 0;
+  aspect-ratio: 0.88;
+  overflow: hidden;
+  border: 1px solid #dce7f5;
+  border-radius: 22px;
+  background: #eaf3ff;
+  box-shadow: 0 16px 40px rgba(11, 94, 215, 0.12);
+}
+
+.section-about .analyst-photo-card .analyst-photo {
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.section-about .about-credentials {
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 62px;
+  margin: 16px auto 0;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border: 1px solid #dce7f5;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(6, 43, 99, 0.07);
+}
+
+.section-about .about-credentials-icon {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: #eaf3ff;
+  color: #0b5ed7;
+}
+
+.section-about .about-credentials > span:last-child {
+  display: grid;
+  gap: 2px;
+}
+
+.section-about .about-credentials strong {
+  color: #062b63;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.section-about .about-credentials > span:last-child > span {
+  color: #52667a;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.section-about .about-copy {
+  min-width: 0;
+}
+
+.section-about .about-copy > div:first-child {
+  margin-bottom: 18px;
+}
+
+.section-about .about-copy > div:first-child > .eyebrow {
+  margin: 0 0 12px;
+  color: #0b5ed7;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.section-about .about-title {
+  display: block;
+  color: #062b63;
+  font-size: clamp(42px, 4.2vw, 54px);
+  font-weight: 750;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.section-about .about-title-underline {
+  display: none;
+}
+
+.section-about .about-description,
+.section-about .about-copy > p:not(.about-description) {
+  color: #52667a;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.section-about .about-description {
+  margin: 0 0 22px;
+}
+
+.section-about .about-copy h3 {
+  margin: 0 0 12px;
+  color: #102a43;
+  font-size: 20px;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.section-about .about-copy ul {
+  margin: 0 0 22px;
+  gap: 10px;
+}
+
+.section-about .about-copy li {
+  min-height: 44px;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 10px;
+  border-radius: 11px;
+  color: #334e68;
+  font-size: 16px;
+  line-height: 1.5;
+  transition: background-color 200ms ease, color 200ms ease, box-shadow 200ms ease;
+}
+
+.section-about .about-copy li:hover,
+.section-about .about-copy li:focus-visible,
+.section-about .about-copy li:has(> span.is-active) {
+  background: #eaf3ff;
+  color: #183e69;
+  box-shadow: none;
+}
+
+.section-about .about-copy li > span,
+.section-about .about-copy li > span.is-active,
+.section-about .about-copy li:hover > span,
+.section-about .about-copy li:focus-visible > span {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: #eaf3ff;
+  color: #0b5ed7;
+  box-shadow: none;
+}
+
+.section-about .about-copy > p:not(.about-description) {
+  margin: 0 0 22px;
+}
+
+.section-about .about-cta {
+  min-height: 48px;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 1px solid #0b5ed7;
+  border-radius: 9px;
+  background: #0b5ed7;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 650;
+  box-shadow: 0 6px 16px rgba(11, 94, 215, 0.16);
+}
+
+.section-about .about-cta:hover,
+.section-about .about-cta:focus-visible {
+  background: #084fb9;
+  box-shadow: 0 9px 22px rgba(11, 94, 215, 0.24);
+}
+
+@media (max-width: 1050px) {
+  .section-about .about-content {
+    gap: 34px;
+  }
+
+  .section-about .about-title {
+    font-size: clamp(38px, 4.6vw, 48px);
+  }
+
+  .section-about .analyst-photo-card {
+    aspect-ratio: 0.84;
+  }
+}
+
+@media (max-width: 760px) {
+  .section-about > .container {
+    width: min(100% - 36px, 620px);
+  }
+
+  .section-about .about-content {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .section-about .about-visual {
+    width: 100%;
+    max-width: 500px;
+    margin-inline: auto;
+  }
+
+  .section-about .analyst-photo-card {
+    aspect-ratio: 0.96;
+    border-radius: 18px;
+  }
+
+  .section-about .about-credentials {
+    margin-top: 12px;
+  }
+
+  .section-about .about-title {
+    font-size: clamp(32px, 8vw, 38px);
+    line-height: 1.12;
+  }
+
+  .section-about .about-copy > div:first-child > .eyebrow {
+    font-size: 14px;
+  }
+
+  .section-about .about-description,
+  .section-about .about-copy > p:not(.about-description) {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .section-about .about-copy h3 {
+    font-size: 18px;
+  }
+
+  .section-about .about-copy li {
+    padding: 8px;
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-about .about-copy li,
+  .section-about .about-cta {
+    transition-duration: 0.01ms;
+  }
+}
+
+/* Compact vertical rhythm between landing-page sections. */
+.section {
+  padding-block: 64px;
+}
+
+.section-about {
+  padding-block: 64px;
+}
+
+.application-section {
+  padding-block: 64px;
+}
+
+.trust-bar {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.site-footer {
+  padding-top: 34px;
+  padding-bottom: 16px;
+}
+
+.site-footer .footer-main {
+  padding-bottom: 24px;
+}
+
+@media (max-width: 1050px) {
+  .section,
+  .section-about,
+  .application-section {
+    padding-block: 56px;
+  }
+}
+
+.steps-grid {
+  margin-top: 32px;
+}
+
+@media (max-width: 760px) {
+  .section,
+  .section-about,
+  .application-section {
+    padding-block: 46px;
+  }
+
+  .section-about {
+    padding-block: 46px;
+  }
+
+  .application-section {
+    padding-block: 48px;
+  }
+}
+
+@media (max-width: 520px) {
+  .section,
+  .section-about,
+  .application-section {
+    padding-block: 42px;
+  }
+
+  .section-about,
+  .application-section {
+    padding-block: 42px;
+  }
+}
+
+/* Prevent adjacent sections from stacking their full vertical padding. */
+main > .section,
+main > .application-section {
+  padding-bottom: 48px;
+}
+
+main > .section + .section,
+main > .section + .application-section,
+main > .application-section + .section {
+  padding-top: 32px;
+}
+
+main > .section-about {
+  padding-bottom: 28px;
+}
+
+main > .section-about + .section-who {
+  padding-top: 28px;
+}
+
+@media (max-width: 1050px) {
+  main > .section,
+  main > .application-section {
+    padding-bottom: 40px;
+  }
+
+  main > .section + .section,
+  main > .section + .application-section,
+  main > .application-section + .section {
+    padding-top: 24px;
+  }
+
+  main > .section-about {
+    padding-bottom: 24px;
+  }
+
+  main > .section-about + .section-who {
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  main > .section,
+  main > .application-section {
+    padding-bottom: 24px;
+  }
+
+  main > .section + .section,
+  main > .section + .application-section,
+  main > .application-section + .section {
+    padding-top: 24px;
+  }
+
+  main > .section-about {
+    padding-bottom: 16px;
+  }
+
+  main > .section-about + .section-who {
+    padding-top: 16px;
+  }
+}
+
+/* Single centered FAQ card and compact row separators. */
+.section-faq .faq-container {
+  width: min(100%, 1000px);
+  gap: 20px;
+}
+
+.section-faq .faq-list {
+  width: min(100%, 960px);
+  gap: 0;
+  padding: 8px 20px;
+  border: 1px solid #d6e4f4;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(11, 94, 215, 0.045);
+}
+
+.section-faq .faq-item,
+.section-faq .faq-item.is-open {
+  border: 0;
+  border-bottom: 1px solid #e1ebf6;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.section-faq .faq-item:last-child {
+  border-bottom: 0;
+}
+
+.section-faq .faq-trigger {
+  min-height: 64px;
+  padding: 15px 10px;
+}
+
+.section-faq .faq-panel {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+@media (max-width: 760px) {
+  .section-faq .faq-container {
+    width: min(100% - 36px, 620px);
+    gap: 16px;
+  }
+
+  .section-faq .faq-list {
+    padding: 4px 12px;
+  }
+
+  .section-faq .faq-trigger {
+    min-height: 60px;
+    padding: 14px 6px;
+  }
+
+  .section-faq .faq-panel {
+    padding-right: 6px;
+    padding-left: 6px;
+  }
+}
+
+/* Keep the application panel close to its fields and natural content height. */
+main > .section-process {
+  padding-bottom: 16px;
+}
+
+main > .application-section {
+  padding-block: 48px;
+}
+
+main > .section-process + .application-section {
+  padding-top: 48px;
+}
+
+.application-section .application-aside {
+  margin-top: 24px;
+}
+
+.application-section .application-form-wrap {
+  padding-block: 26px;
+}
+
+.application-section .form-heading {
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+}
+
+.application-section .form-grid {
+  row-gap: 16px;
+}
+
+.application-section .risk-field,
+.application-section .form-submit-row {
+  margin-top: 16px;
+}
+
+@media (max-width: 1050px) {
+  main > .section-process {
+    padding-bottom: 16px;
+  }
+
+  main > .application-section {
+    padding-block: 40px;
+  }
+
+  main > .section-process + .application-section {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 760px) {
+  main > .section-process {
+    padding-bottom: 12px;
+  }
+
+  main > .application-section {
+    padding-block: 36px;
+  }
+
+  main > .section-process + .application-section {
+    padding-top: 36px;
+  }
+
+  .application-section .application-form-wrap {
+    padding: 22px 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  main > .application-section {
+    padding-block: 32px;
+  }
+
+  main > .section-process + .application-section {
+    padding-top: 32px;
+  }
+
+  .application-section .application-form-wrap {
+    padding: 20px 18px;
+  }
+}

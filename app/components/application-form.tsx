@@ -9,6 +9,7 @@ import {
   type ReactNode,
 } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import {
   ArrowRight,
   Check,
@@ -267,6 +268,8 @@ function CelebrationLayer({
 }
 
 export function ApplicationForm() {
+  const router = useRouter();
+  const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<FieldErrors>({});
@@ -340,8 +343,22 @@ export function ApplicationForm() {
     setIsSubmitting(true);
     try {
       await submitApplication(application);
+      formRef.current?.reset();
+      setErrors({});
+      setSubmissionError("");
+      setValidFields({});
+      setIsComplete(false);
+      wasComplete.current = false;
+      hasStarted.current = false;
       setIsSubmitted(true);
       triggerCelebration("submitted", 2200);
+      await new Promise<void>((resolve) => {
+        window.setTimeout(resolve, 1700);
+      });
+      setIsSubmitted(false);
+      setCelebration(null);
+      if (celebrationTimer.current) clearTimeout(celebrationTimer.current);
+      router.push("/thank-you");
     } catch (error) {
       setSubmissionError(
         error instanceof Error
@@ -417,6 +434,7 @@ export function ApplicationForm() {
       </AnimatePresence>
       <form
         className="application-form"
+        ref={formRef}
         onChange={(event) => {
           updateProgress(event.currentTarget);
           const target = event.target;
