@@ -99,15 +99,19 @@ export function LandingPage() {
 
         <section aria-label="Program credentials" className="trust-bar">
           <div className="trust-item">
-            <CalendarCheck aria-hidden="true" size={20} />
+            <CalendarCheck aria-hidden="true" size={21} />
             <span className="trust-item-copy"><strong>16 Weeks</strong><span>Live-Mentored Program</span></span>
           </div>
           <div className="trust-item">
-            <MessageCircle aria-hidden="true" size={20} />
-            <span className="trust-item-copy"><strong>Live Mentoring</strong><span>Interactive Learning</span></span>
+            <Video aria-hidden="true" size={21} />
+            <span className="trust-item-copy"><strong>Live Sessions</strong><span>Interactive Learning</span></span>
           </div>
           <div className="trust-item">
-            <ShieldCheck aria-hidden="true" size={20} />
+            <UserCheck aria-hidden="true" size={21} />
+            <span className="trust-item-copy"><strong>Direct Mentor</strong><span>Guidance &amp; Feedback</span></span>
+          </div>
+          <div className="trust-item">
+            <ShieldCheck aria-hidden="true" size={21} />
             <span className="trust-item-copy"><strong>Risk First</strong><span>Structured Approach</span></span>
           </div>
         </section>

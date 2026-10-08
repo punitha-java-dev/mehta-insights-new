@@ -50,9 +50,9 @@ export function SiteHeader() {
             height={667}
             priority
             src="/images/mehta-insights-logo.png"
-            style={{ width: "clamp(145px, 14vw, 190px)", height: "auto" }}
+            style={{ height: "auto", objectFit: "contain" }}
             width={2000}
-            sizes="(max-width: 760px) 160px, 190px"
+            sizes="(max-width: 760px) 160px, 205px"
           />
         </a>
 
