@@ -3,11 +3,9 @@ import {
   ArrowRight,
   AlertTriangle,
   CalendarCheck,
-  BookOpen,
   Check,
   Clock,
   FileEdit,
-  LineChart,
   Layers,
   MessageCircle,
   Search,
@@ -100,10 +98,18 @@ export function LandingPage() {
         </section>
 
         <section aria-label="Program credentials" className="trust-bar">
-          <div className="trust-item"><BookOpen aria-hidden="true" size={17} /> 16-Week Live-Mentored Program</div>
-          <div className="trust-item"><MessageCircle aria-hidden="true" size={17} /> Live mentoring</div>
-          <div className="trust-item"><LineChart aria-hidden="true" size={17} /> Fundamentals and technicals</div>
-          <div className="trust-item"><ShieldCheck aria-hidden="true" size={17} /> Structured approach</div>
+          <div className="trust-item">
+            <CalendarCheck aria-hidden="true" size={20} />
+            <span className="trust-item-copy"><strong>16 Weeks</strong><span>Live-Mentored Program</span></span>
+          </div>
+          <div className="trust-item">
+            <MessageCircle aria-hidden="true" size={20} />
+            <span className="trust-item-copy"><strong>Live Mentoring</strong><span>Interactive Learning</span></span>
+          </div>
+          <div className="trust-item">
+            <ShieldCheck aria-hidden="true" size={20} />
+            <span className="trust-item-copy"><strong>Risk First</strong><span>Structured Approach</span></span>
+          </div>
         </section>
 
         <section className="section section-problem" id="problem">
