@@ -52,7 +52,7 @@ export function SiteHeader() {
             src="/images/mehta-insights-logo.png"
             style={{ height: "auto", objectFit: "contain" }}
             width={2000}
-            sizes="(max-width: 760px) 160px, 205px"
+            sizes="(max-width: 760px) 165px, 210px"
           />
         </a>
 
