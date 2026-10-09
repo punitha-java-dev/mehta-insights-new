@@ -236,7 +236,7 @@ export function AboutInteractive() {
                 alt="Ankit Mehta"
                 className="analyst-photo"
                 height={1303}
-                src="/images/hero-mehta-insights.png"
+                src="/images/mehta-trading-office.png"
                 width={1303}
                 sizes="(max-width: 520px) 100vw, (max-width: 760px) 40vw, 42vw"
               />
