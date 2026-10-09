@@ -31,7 +31,11 @@ export function ProgramDetailCards() {
         >
           <span className="program-detail-icon"><Icon aria-hidden="true" size={20} /></span>
           <span className="program-detail-label">{label}</span>
-          <strong>{value}</strong>
+          <strong>
+            {value === "16 Weeks" || value === "Live-mentored"
+              ? <span className="gold-keyword-light">{value}</span>
+              : value}
+          </strong>
         </motion.div>
       ))}
     </div>

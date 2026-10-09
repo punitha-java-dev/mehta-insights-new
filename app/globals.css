@@ -476,6 +476,361 @@ header.site-header .mobile-nav {
   }
 }
 
+/* Consistent icon finish across the existing landing-page components. */
+svg[aria-hidden="true"] {
+  flex-shrink: 0;
+  transition: color 240ms ease;
+}
+
+.site-header .header-cta svg,
+.site-header .mobile-nav-cta svg,
+.button.button-blue svg {
+  color: #062b63;
+}
+
+.hero-section .trust-mark {
+  border: 1px solid #dce7f5;
+  background: #eaf3ff;
+  color: #0b5ed7;
+}
+
+.trust-bar .trust-item svg {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  padding: 7px;
+  border: 1px solid #dce7f5;
+  border-radius: 50%;
+  background: #eaf3ff;
+  color: #0b5ed7;
+}
+
+.section-learn .learn-icon {
+  border: 1px solid #dce7f5;
+  border-radius: 12px;
+  background: #eaf3ff;
+  color: #0b5ed7;
+  transition: background-color 240ms ease, border-color 240ms ease, scale 240ms ease;
+}
+
+.section-who .program-summary .program-detail {
+  grid-template-columns: 36px minmax(0, 1fr);
+}
+
+.section-who .program-summary .program-detail-icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #dce7f5;
+  border-radius: 10px;
+  background: #eaf3ff;
+}
+
+.section-process .step-icon {
+  border: 1px solid #dce7f5;
+  border-radius: 12px;
+  background: #eaf3ff;
+  color: #0b5ed7;
+}
+
+.section-about .about-credentials-icon {
+  border: 1px solid #dce7f5;
+  background: #eaf3ff;
+  color: #0b5ed7;
+}
+
+.section-about .about-copy li > span,
+.section-about .about-copy li > span.is-active,
+.section-about .about-copy li:hover > span,
+.section-about .about-copy li:focus-visible > span {
+  border: 1px solid #dce7f5;
+  background: #eaf3ff;
+  color: #0b5ed7;
+}
+
+.application-section .application-copy .aside-icon {
+  border-color: rgba(255, 200, 87, 0.55);
+  background: #fff3d6;
+  color: #062b63;
+}
+
+.form-ready-settled svg,
+.form-celebration-status svg,
+.field-complete-mark,
+.form-success .success-icon {
+  color: #047857;
+}
+
+.thank-you-page .success-icon {
+  border-color: #bbf7d0;
+  background: #dcfce7;
+  color: #047857;
+}
+
+.section-faq .faq-chevron {
+  border-color: #dce7f5;
+  border-radius: 50%;
+  background: #eaf3ff;
+  color: #0b5ed7;
+  transition: background-color 240ms ease, border-color 240ms ease, color 240ms ease, transform 180ms ease;
+}
+
+.site-footer .back-to-top {
+  border-color: rgba(255, 200, 87, 0.42);
+  border-radius: 50%;
+  background: rgba(255, 243, 214, 0.08);
+  color: #ffc857;
+}
+
+.section-problem .comparison-problem .comparison-item-icon {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  padding: 7px;
+  border: 1px solid #ffd6d6;
+  border-radius: 50%;
+  background: #fff5f5;
+  color: #dc2626;
+}
+
+.section-problem .comparison-solution .comparison-item-icon {
+  border-color: rgba(4, 120, 87, 0.25);
+  background: #b7f7cc;
+  color: #008a45;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .button svg,
+  .site-header .header-cta svg,
+  .site-header .mobile-nav-cta svg,
+  .section-process .step-icon,
+  .section-about .about-credentials-icon,
+  .section-who .program-detail-icon,
+  .trust-bar .trust-item svg {
+    transition: color 240ms ease, background-color 240ms ease, border-color 240ms ease, scale 240ms ease;
+  }
+
+  .button:hover svg,
+  .site-header .header-cta:hover svg,
+  .site-header .mobile-nav-cta:hover svg {
+    scale: 1.06;
+  }
+
+  .section-learn .learn-card:hover .learn-icon,
+  .section-process .step-card:hover .step-icon {
+    border-color: #b9d5fa;
+    background: #dcecff;
+    scale: 1.06;
+  }
+
+  .section-who .program-summary .program-detail:hover .program-detail-icon,
+  .trust-bar .trust-item:hover svg {
+    border-color: #b9d5fa;
+    background: #dcecff;
+    scale: 1.05;
+  }
+
+  .section-faq .faq-trigger:hover .faq-chevron {
+    border-color: #b9d5fa;
+    background: #dcecff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  svg[aria-hidden="true"],
+  .section-learn .learn-icon,
+  .section-process .step-icon,
+  .section-about .about-credentials-icon,
+  .section-who .program-detail-icon,
+  .section-faq .faq-chevron,
+  .trust-bar .trust-item svg {
+    transition: none;
+  }
+}
+
+/* Final Why Mehta treatment after the existing section overrides. */
+.section-about .about-title-highlight {
+  display: inline;
+  padding-inline: 0.12em;
+  border-radius: 0.12em;
+  background: #ffc857;
+  color: #062b63;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.section-about .about-description {
+  margin-bottom: 24px;
+  line-height: 1.75;
+}
+
+.section-about .about-copy h3 {
+  margin-bottom: 14px;
+  color: #062b63;
+  line-height: 1.45;
+}
+
+.section-about .about-copy ul {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 24px;
+}
+
+.section-about .about-copy li {
+  min-height: 62px;
+  gap: 14px;
+  padding: 12px 16px;
+  border: 1px solid #dce7f5;
+  border-radius: 12px;
+  background: #eaf3ff;
+  color: #062b63;
+  line-height: 1.55;
+  transition: background-color 260ms ease, border-color 260ms ease, box-shadow 260ms ease, translate 260ms ease;
+}
+
+.section-about .about-copy li:hover,
+.section-about .about-copy li:focus-visible,
+.section-about .about-copy li:has(> span.is-active) {
+  border-color: #b9d5fa;
+  background: #f4f8fc;
+  color: #062b63;
+  box-shadow: 0 6px 16px rgba(6, 43, 99, 0.07);
+  translate: 0 -2px;
+}
+
+.section-about .about-copy li > span,
+.section-about .about-copy li > span.is-active,
+.section-about .about-copy li:hover > span,
+.section-about .about-copy li:focus-visible > span {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border: 1px solid #dce7f5;
+  border-radius: 10px;
+  background: #fff;
+  color: #0b5ed7;
+}
+
+.section-about .about-credentials {
+  margin-top: 14px;
+  margin-inline: 0;
+  border-radius: 14px;
+}
+
+@media (max-width: 760px) {
+  .section-about .about-copy ul {
+    gap: 10px;
+  }
+
+  .section-about .about-copy li {
+    min-height: 58px;
+    padding: 11px 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-about .about-copy li {
+    transition: none;
+  }
+
+  .section-about .about-copy li:hover,
+  .section-about .about-copy li:focus-visible,
+  .section-about .about-copy li:has(> span.is-active) {
+    translate: none;
+  }
+}
+
+/* Refine the existing Why Mehta content and benefit cards. */
+.section-about .about-title-highlight {
+  display: inline;
+  padding-inline: 0.12em;
+  border-radius: 0.12em;
+  background: #ffc857;
+  color: #062b63;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.section-about .about-description {
+  margin-bottom: 24px;
+  line-height: 1.75;
+}
+
+.section-about .about-copy h3 {
+  margin-bottom: 14px;
+  color: #062b63;
+  line-height: 1.45;
+}
+
+.section-about .about-copy ul {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 24px;
+}
+
+.section-about .about-copy li {
+  min-height: 62px;
+  gap: 14px;
+  padding: 12px 16px;
+  border: 1px solid #dce7f5;
+  border-radius: 12px;
+  background: #eaf3ff;
+  color: #062b63;
+  line-height: 1.55;
+  transition: background-color 260ms ease, border-color 260ms ease, box-shadow 260ms ease, translate 260ms ease;
+}
+
+.section-about .about-copy li:hover,
+.section-about .about-copy li:focus-visible,
+.section-about .about-copy li:has(> span.is-active) {
+  border-color: #b9d5fa;
+  background: #f4f8fc;
+  color: #062b63;
+  box-shadow: 0 6px 16px rgba(6, 43, 99, 0.07);
+  translate: 0 -2px;
+}
+
+.section-about .about-copy li > span,
+.section-about .about-copy li > span.is-active,
+.section-about .about-copy li:hover > span,
+.section-about .about-copy li:focus-visible > span {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border: 1px solid #dce7f5;
+  border-radius: 10px;
+  background: #fff;
+  color: #0b5ed7;
+}
+
+.section-about .about-credentials {
+  margin-top: 14px;
+  margin-inline: 0;
+  border-radius: 14px;
+}
+
+@media (max-width: 760px) {
+  .section-about .about-copy ul {
+    gap: 10px;
+  }
+
+  .section-about .about-copy li {
+    min-height: 58px;
+    padding: 11px 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-about .about-copy li {
+    transition: none;
+  }
+
+  .section-about .about-copy li:hover,
+  .section-about .about-copy li:focus-visible,
+  .section-about .about-copy li:has(> span.is-active) {
+    translate: none;
+  }
+}
+
 .hero-portrait-stage {
   width: 100%;
   max-width: none;
@@ -7306,5 +7661,355 @@ header.site-header .mobile-nav .mobile-nav-cta:focus-visible {
   .section-about .analyst-profile-card .analyst-photo-card.is-image-active,
   .section-about .analyst-profile-card .analyst-photo-card:focus-visible {
     border-radius: 0 0 15px 15px;
+  }
+}
+
+/* Emphasize the solution card within the Problem section. */
+.section-problem .comparison-problem {
+  border-color: #ffd6d6;
+  background: #fff5f5;
+  box-shadow: 0 2px 8px rgba(6, 43, 99, 0.035);
+}
+
+.section-problem .comparison-problem h3 {
+  color: #062b63;
+}
+
+.section-problem .comparison-problem .comparison-item-icon {
+  width: 16px;
+  height: 16px;
+  color: #dc2626;
+}
+
+.section-problem .comparison-problem li {
+  border-color: rgba(220, 38, 38, 0.12);
+}
+
+.section-problem .comparison-solution {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #4ade80;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #e8fff0 0%, #c8f7d8 100%);
+  box-shadow: 0 10px 32px rgba(34, 197, 94, 0.18);
+  transition: border-color 280ms ease, box-shadow 280ms ease, translate 280ms ease;
+}
+
+.section-problem .comparison-solution::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: #22c55e;
+  content: "";
+}
+
+.section-problem .comparison-solution h3 {
+  color: #062b63;
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.section-problem .comparison-solution h3 > span {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  background: #16a34a;
+  color: #fff;
+}
+
+.section-problem .comparison-solution li {
+  border-color: rgba(4, 120, 87, 0.2);
+  color: #062b63;
+}
+
+.section-problem .comparison-solution .comparison-item-icon {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  padding: 7px;
+  border: 1px solid rgba(4, 120, 87, 0.2);
+  border-radius: 50%;
+  background: #b7f7cc;
+  color: #008a45;
+  transition: scale 280ms ease;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .section-problem .comparison-solution:hover {
+    border-color: #22c55e;
+    box-shadow: 0 14px 38px rgba(34, 197, 94, 0.24);
+    translate: 0 -4px;
+  }
+
+  .section-problem .comparison-solution:hover .comparison-item-icon {
+    scale: 1.06;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-problem .comparison-solution,
+  .section-problem .comparison-solution .comparison-item-icon {
+    transition: none;
+  }
+}
+
+/* Premium warm accents for primary actions and selected key phrases. */
+.button.button-blue,
+.hero-section .hero-actions .button-blue,
+.section-cta-row .button-blue,
+.section-who .program-summary > .button.button-blue,
+.section-about .about-cta,
+.application-section .form-submit,
+header.site-header .header-cta,
+header.site-header .mobile-nav .mobile-nav-cta {
+  border-color: #f5a623;
+  background: linear-gradient(135deg, #ffc857 0%, #ffaa33 100%);
+  color: #062b63;
+  box-shadow: 0 5px 14px rgba(245, 166, 35, 0.2);
+  transition: background 260ms ease, border-color 260ms ease, box-shadow 260ms ease, translate 260ms ease;
+}
+
+.button.button-blue:hover,
+.button.button-blue:focus-visible,
+.hero-section .hero-actions .button-blue:hover,
+.hero-section .hero-actions .button-blue:focus-visible,
+.section-cta-row .button-blue:hover,
+.section-cta-row .button-blue:focus-visible,
+.section-who .program-summary > .button.button-blue:hover,
+.section-who .program-summary > .button.button-blue:focus-visible,
+.section-about .about-cta:hover,
+.section-about .about-cta:focus-visible,
+.application-section .form-submit:hover,
+.application-section .form-submit:focus-visible,
+header.site-header .header-cta:hover,
+header.site-header .header-cta:focus-visible,
+header.site-header .mobile-nav .mobile-nav-cta:hover,
+header.site-header .mobile-nav .mobile-nav-cta:focus-visible {
+  border-color: #ffb84d;
+  background: linear-gradient(135deg, #ffd775 0%, #ffb84d 100%);
+  color: #062b63;
+  box-shadow: 0 8px 18px rgba(245, 166, 35, 0.28);
+  translate: 0 -2px;
+}
+
+.gold-on-dark {
+  color: #ffc857;
+}
+
+.hero-section .hero-copy h1 .gold-on-dark,
+.application-section .application-copy h2 .gold-on-dark,
+.application-section .application-copy .application-aside strong.gold-on-dark {
+  color: #ffc857;
+}
+
+.gold-keyword-light {
+  display: inline-block;
+  padding-inline: 0.2em;
+  border-radius: 0.2em;
+  background: #ffc857;
+  color: #062b63;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button.button-blue,
+  .hero-section .hero-actions .button-blue,
+  .section-cta-row .button-blue,
+  .section-who .program-summary > .button.button-blue,
+  .section-about .about-cta,
+  .application-section .form-submit,
+  header.site-header .header-cta,
+  header.site-header .mobile-nav .mobile-nav-cta {
+    transition: none;
+  }
+
+  .button.button-blue:hover,
+  .button.button-blue:focus-visible,
+  .hero-section .hero-actions .button-blue:hover,
+  .hero-section .hero-actions .button-blue:focus-visible,
+  .section-cta-row .button-blue:hover,
+  .section-cta-row .button-blue:focus-visible,
+  .section-who .program-summary > .button.button-blue:hover,
+  .section-who .program-summary > .button.button-blue:focus-visible,
+  .section-about .about-cta:hover,
+  .section-about .about-cta:focus-visible,
+  .application-section .form-submit:hover,
+  .application-section .form-submit:focus-visible,
+  header.site-header .header-cta:hover,
+  header.site-header .header-cta:focus-visible,
+  header.site-header .mobile-nav .mobile-nav-cta:hover,
+  header.site-header .mobile-nav .mobile-nav-cta:focus-visible {
+    translate: none;
+  }
+}
+
+/* Final icon palette and interaction states after the legacy section rules. */
+svg[aria-hidden="true"] {
+  flex-shrink: 0;
+  stroke-width: 1.9;
+}
+
+.site-header .header-cta svg,
+.site-header .mobile-nav-cta svg,
+.button.button-blue svg,
+.hero-section .hero-actions .button-blue svg,
+.section-cta-row .button-blue svg,
+.section-who .program-summary > .button-blue svg,
+.section-about .about-cta svg,
+.application-section .form-submit svg {
+  color: #062b63;
+}
+
+.hero-section .trust-mark {
+  border: 1px solid #dce7f5;
+  background: #eaf3ff;
+  color: #0b5ed7;
+}
+
+.trust-bar .trust-item svg {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  padding: 7px;
+  border: 1px solid #dce7f5;
+  border-radius: 50%;
+  background: #eaf3ff;
+  color: #0b5ed7;
+}
+
+.section-learn .learn-icon {
+  border: 1px solid #dce7f5;
+  border-radius: 12px;
+  background: #eaf3ff;
+  color: #0b5ed7;
+  transition: background-color 240ms ease, border-color 240ms ease, scale 240ms ease;
+}
+
+.section-who .program-summary .program-detail {
+  grid-template-columns: 36px minmax(0, 1fr);
+}
+
+.section-who .program-summary .program-detail-icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #dce7f5;
+  border-radius: 10px;
+  background: #eaf3ff;
+  color: #0b5ed7;
+}
+
+.section-process .step-icon {
+  border: 1px solid #dce7f5;
+  border-radius: 12px;
+  background: #eaf3ff;
+  color: #0b5ed7;
+}
+
+.section-about .about-credentials-icon,
+.section-about .about-copy li > span,
+.section-about .about-copy li > span.is-active,
+.section-about .about-copy li:hover > span,
+.section-about .about-copy li:focus-visible > span {
+  border: 1px solid #dce7f5;
+  background: #eaf3ff;
+  color: #0b5ed7;
+}
+
+.application-section .application-copy .aside-icon {
+  border-color: rgba(255, 200, 87, 0.55);
+  background: #fff3d6;
+  color: #062b63;
+}
+
+.field-complete-mark,
+.form-ready-settled svg,
+.form-celebration-status svg,
+.form-success .success-icon,
+.thank-you-page .success-icon {
+  color: #047857;
+}
+
+.form-success .success-icon,
+.thank-you-page .success-icon {
+  border: 1px solid #bbf7d0;
+  background: #dcfce7;
+}
+
+.section-faq .faq-chevron {
+  border-color: #dce7f5;
+  border-radius: 50%;
+  background: #eaf3ff;
+  color: #0b5ed7;
+  transition: background-color 240ms ease, border-color 240ms ease, color 240ms ease, transform 180ms ease;
+}
+
+.site-footer .back-to-top {
+  border-color: rgba(255, 200, 87, 0.42);
+  border-radius: 50%;
+  background: rgba(255, 243, 214, 0.08);
+  color: #ffc857;
+}
+
+.section-problem .comparison-problem .comparison-item-icon {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  padding: 7px;
+  border: 1px solid #ffd6d6;
+  border-radius: 50%;
+  background: #fff5f5;
+  color: #dc2626;
+}
+
+.section-problem .comparison-solution .comparison-item-icon {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  padding: 7px;
+  border: 1px solid rgba(4, 120, 87, 0.25);
+  border-radius: 50%;
+  background: #b7f7cc;
+  color: #008a45;
+  transition: scale 260ms ease, background-color 260ms ease, border-color 260ms ease;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .button svg,
+  .section-process .step-icon,
+  .section-about .about-credentials-icon,
+  .section-who .program-detail-icon,
+  .trust-bar .trust-item svg {
+    transition: color 240ms ease, background-color 240ms ease, border-color 240ms ease, scale 240ms ease;
+  }
+
+  .button:hover svg,
+  .site-header .header-cta:hover svg,
+  .site-header .mobile-nav-cta:hover svg {
+    scale: 1.06;
+  }
+
+  .section-learn .learn-card:hover .learn-icon,
+  .section-process .step-card:hover .step-icon,
+  .section-who .program-summary .program-detail:hover .program-detail-icon,
+  .trust-bar .trust-item:hover svg {
+    border-color: #b9d5fa;
+    background: #dcecff;
+    scale: 1.05;
+  }
+
+  .section-faq .faq-trigger:hover .faq-chevron {
+    border-color: #b9d5fa;
+    background: #dcecff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  svg[aria-hidden="true"],
+  .section-learn .learn-icon,
+  .section-process .step-icon,
+  .section-about .about-credentials-icon,
+  .section-who .program-detail-icon,
+  .section-faq .faq-chevron,
+  .trust-bar .trust-item svg {
+    transition: none;
   }
 }

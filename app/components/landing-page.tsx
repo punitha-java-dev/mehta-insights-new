@@ -142,7 +142,9 @@ export function LandingPage() {
                   {solutions.map(({ icon: Icon, text }) => (
                     <li key={text}>
                       <Icon aria-hidden="true" className="comparison-item-icon" size={18} strokeWidth={1.9} />
-                      {text}
+                      {text === "One clear framework." || text === "Risk first."
+                        ? <span className="gold-keyword-light">{text}</span>
+                        : text}
                     </li>
                   ))}
                 </ol>
@@ -191,7 +193,7 @@ export function LandingPage() {
             </Reveal>
             <Reveal className="program-summary" delay={0.08}>
               <p className="eyebrow">PROGRAM DETAILS</p>
-              <h2>16 Weeks of Live Mentorship</h2>
+              <h2>16 Weeks of <span className="gold-keyword-light">Live Mentorship</span></h2>
               <ProgramDetailCards />
               <p className="program-details-note">
                 Confirm session frequency, format and mentor access with the program team.
@@ -230,7 +232,7 @@ export function LandingPage() {
           <div className="container application-layout">
             <Reveal className="application-copy">
               <p className="eyebrow"><span className="eyebrow-rule" /> APPLY FOR THE PROGRAM</p>
-              <h2>Apply for the<br />16-Week Program</h2>
+              <h2>Apply for the<br /><span className="gold-on-dark">16-Week Program</span></h2>
               <p className="application-intro">
                 Complete the form below to express your interest in the Mehta
                 Insights 16-Week Live-Mentored Trading Program.
@@ -238,7 +240,7 @@ export function LandingPage() {
               <div className="application-aside">
                 <span className="aside-icon"><ShieldCheck aria-hidden="true" size={19} /></span>
                 <p>
-                  <strong>Educational program.</strong><br />
+                  <strong className="gold-on-dark">Educational program.</strong><br />
                   No returns or profits are guaranteed. Trading/investing involves market risk.
                 </p>
               </div>
@@ -304,7 +306,7 @@ export function LandingPage() {
             </p>
           </div>
           <div className="footer-bottom">
-            <span>© Mehta Insights. All rights reserved.</span>
+            <span>©2026 Mehta Insights. All rights reserved.</span>
             <span>CHART TO TRADE</span>
           </div>
         </div>

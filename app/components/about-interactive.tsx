@@ -283,6 +283,7 @@ export function AboutInteractive() {
               <span>
                 <strong>SEBI Registered Research Analyst</strong>
                 <span>INH000025577</span>
+                <span>BSE Enlistment 7060</span>
               </span>
             </div>
           </div>
@@ -291,7 +292,7 @@ export function AboutInteractive() {
             <motion.div variants={headingVariants}>
               <p className="eyebrow">WHY MEHTA INSIGHTS?</p>
               <motion.h2 className="about-title" variants={subtitleVariants}>
-                Learn with a Research-Driven Perspective
+                Learn with a <span className="about-title-highlight">Research-Driven</span> Perspective
                 <span aria-hidden="true" className="about-title-underline" />
               </motion.h2>
             </motion.div>

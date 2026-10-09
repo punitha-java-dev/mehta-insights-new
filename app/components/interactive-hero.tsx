@@ -14,7 +14,7 @@ export function InteractiveHero() {
         <p className="eyebrow hero-eyebrow">
           <span className="eyebrow-rule" /> 16-WEEK LIVE-MENTORED TRADING PROGRAM
         </p>
-        <h1>Master Trading with 16-Week Live-Mentored Program</h1>
+        <h1>Master Trading with 16-Week <span className="gold-on-dark">Live-Mentored</span> Program</h1>
         <p className="hero-description">
           Build your understanding of the markets through a 16-week
           live-mentored trading program designed to help you develop
