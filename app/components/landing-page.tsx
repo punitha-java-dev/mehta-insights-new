@@ -1,5 +1,4 @@
 import {
-  BarChart3,
   ArrowRight,
   AlertTriangle,
   CalendarCheck,
@@ -9,7 +8,6 @@ import {
   Layers,
   MessageCircle,
   Search,
-  ShieldAlert,
   ShieldCheck,
   Shuffle,
   Target,
@@ -23,6 +21,7 @@ import { AboutInteractive } from "@/app/components/about-interactive";
 import { Faq } from "@/app/components/faq";
 import { InteractiveHero } from "@/app/components/interactive-hero";
 import { LearningCards } from "@/app/components/learning-cards";
+import { ProgramDetailCards } from "@/app/components/program-detail-cards";
 import { Reveal } from "@/app/components/reveal";
 import { SiteHeader } from "@/app/components/site-header";
 
@@ -193,28 +192,7 @@ export function LandingPage() {
             <Reveal className="program-summary" delay={0.08}>
               <p className="eyebrow">PROGRAM DETAILS</p>
               <h2>16 Weeks of Live Mentorship</h2>
-              <div className="program-detail-grid">
-                <div className="program-detail">
-                  <span className="program-detail-icon"><CalendarCheck aria-hidden="true" size={19} /></span>
-                  <span className="program-detail-label">PROGRAM DURATION</span>
-                  <strong>16 Weeks</strong>
-                </div>
-                <div className="program-detail">
-                  <span className="program-detail-icon"><Video aria-hidden="true" size={19} /></span>
-                  <span className="program-detail-label">LEARNING FORMAT</span>
-                  <strong>Live-mentored</strong>
-                </div>
-                <div className="program-detail">
-                  <span className="program-detail-icon"><BarChart3 aria-hidden="true" size={19} /></span>
-                  <span className="program-detail-label">PROGRAM FOCUS</span>
-                  <strong>Trading education</strong>
-                </div>
-                <div className="program-detail">
-                  <span className="program-detail-icon"><ShieldAlert aria-hidden="true" size={19} /></span>
-                  <span className="program-detail-label">RISK AWARENESS</span>
-                  <strong>Risk first</strong>
-                </div>
-              </div>
+              <ProgramDetailCards />
               <p className="program-details-note">
                 Confirm session frequency, format and mentor access with the program team.
               </p>

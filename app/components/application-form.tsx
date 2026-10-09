@@ -500,7 +500,7 @@ export function ApplicationForm() {
             required
             type="checkbox"
           />
-          <span>
+          <span className="risk-confirmation-text">
             I understand that this is an educational program and that
             trading/investing involves market risk. No returns or profits are
             guaranteed.
@@ -520,7 +520,6 @@ export function ApplicationForm() {
             <>Submit Application <ArrowRight aria-hidden="true" size={17} /></>
           )}
         </button>
-        <p>Your application will be reviewed by the program team.</p>
       </div>
       </form>
     </div>

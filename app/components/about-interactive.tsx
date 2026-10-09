@@ -189,7 +189,12 @@ export function AboutInteractive() {
       <div className="container">
         <div className="about-content">
           <div className="about-visual">
-            <motion.div
+            <div className="analyst-profile-card">
+              <div className="analyst-name-label">
+                <strong>Ankit Mehta</strong>
+                <span>CMT, CFTe, QPFP</span>
+              </div>
+              <motion.div
               aria-label="Ankit Mehta portrait; activate to apply for the program"
               aria-pressed={imageActive}
               className={`analyst-photo-card${imageActive ? " is-image-active" : ""}`}
@@ -269,7 +274,8 @@ export function AboutInteractive() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </motion.div>
+              </motion.div>
+            </div>
             <div className="about-credentials">
               <span className="about-credentials-icon">
                 <ShieldCheck aria-hidden="true" size={19} strokeWidth={1.9} />
